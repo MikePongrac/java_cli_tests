@@ -28,6 +28,10 @@
 #  This:      javac -classpath "classes" com.g2.ExecJar.Start
 #  should be: java -classpath "classes" com.g2.ExecJar.Start
 
+# The following line is only required to cleanup previously compiled classes.
+#rm -rf classes
+# The following line ensures that the folder to hold the compiled class files exists.
+mkdir classes 
 javac -d "classes" "src/com/g2/ExecJar/Person.java"
 javac -d "classes" -classpath "classes" "src/com/g2/ExecJar/Start.java"
 java -classpath "classes" com.g2.ExecJar.Start
